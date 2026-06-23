@@ -684,14 +684,18 @@ func valueToICECandidate(val js.Value) *ICECandidate {
 	if val.IsNull() || val.IsUndefined() {
 		return nil
 	}
-	if val.Get("protocol").IsUndefined() && !val.Get("candidate").IsUndefined() {
-		// Missing some fields, assume it's Firefox and parse SDP candidate.
-		c, err := ice.UnmarshalCandidate(val.Get("candidate").String())
+	sdpMid := valueToStringOrZero(val.Get("sdpMid"))
+	sdpMLineIndex := valueToUint16OrZero(val.Get("sdpMLineIndex"))
+	candidateStr := valueToStringOrZero(val.Get("candidate"))
+	if candidateStr != "" {
+		// The SDP candidate string is authoritative; rebuilding from typed
+		// browser fields can lose fields Chromium still needs on WASM.
+		c, err := ice.UnmarshalCandidate(candidateStr)
 		if err != nil {
 			return nil
 		}
 
-		iceCandidate, err := newICECandidateFromICE(c, "", 0)
+		iceCandidate, err := newICECandidateFromICE(c, sdpMid, sdpMLineIndex)
 		if err != nil {
 			return nil
 		}
@@ -710,6 +714,8 @@ func valueToICECandidate(val js.Value) *ICECandidate {
 		Component:      stringToComponentIDOrZero(val.Get("component").String()),
 		RelatedAddress: val.Get("relatedAddress").String(),
 		RelatedPort:    valueToUint16OrZero(val.Get("relatedPort")),
+		SDPMid:         sdpMid,
+		SDPMLineIndex:  sdpMLineIndex,
 	}
 }
 
