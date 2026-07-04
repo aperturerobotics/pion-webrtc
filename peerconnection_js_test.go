@@ -45,18 +45,21 @@ func TestValueToICECandidate(t *testing.T) {
 				RelatedPort:    0,
 			},
 		}, {
-			// Both are present, Chrome/Webkit-style takes precedent:
-			`{"candidate":"1966762133 1 udp 2122260222 192.168.20.128 47298 typ srflx raddr 203.0.113.1 rport 5000", "foundation":"1966762134", "component":"rtp", "protocol":"udp", "priority":2122260223, "address":"192.168.20.129", "port":47299, "type":"host", "relatedAddress":null}`,
+			// Both are present; the SDP candidate string is the browser's
+			// authoritative candidate payload.
+			`{"candidate":"1966762133 1 udp 2122260222 192.168.20.128 47298 typ srflx raddr 203.0.113.1 rport 5000", "foundation":"1966762134", "component":"rtp", "protocol":"udp", "priority":2122260223, "address":"192.168.20.129", "port":47299, "type":"host", "relatedAddress":null, "sdpMid":"0", "sdpMLineIndex":2}`,
 			ICECandidate{
-				Foundation:     "1966762134",
-				Priority:       2122260223,
-				Address:        "192.168.20.129",
+				Foundation:     "1966762133",
+				Priority:       2122260222,
+				Address:        "192.168.20.128",
 				Protocol:       ICEProtocolUDP,
-				Port:           47299,
-				Typ:            ICECandidateTypeHost,
+				Port:           47298,
+				Typ:            ICECandidateTypeSrflx,
 				Component:      1,
-				RelatedAddress: "<null>",
-				RelatedPort:    0,
+				RelatedAddress: "203.0.113.1",
+				RelatedPort:    5000,
+				SDPMid:         "0",
+				SDPMLineIndex:  2,
 			},
 		},
 	}
