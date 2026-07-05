@@ -14,7 +14,6 @@
   <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/pion/webrtc/test.yaml">
   <a href="https://pkg.go.dev/github.com/pion/webrtc/v4"><img src="https://pkg.go.dev/badge/github.com/pion/webrtc/v4.svg" alt="Go Reference"></a>
   <a href="https://codecov.io/gh/pion/webrtc"><img src="https://codecov.io/gh/pion/webrtc/branch/main/graph/badge.svg" alt="Coverage Status"></a>
-  <a href="https://goreportcard.com/report/github.com/pion/webrtc/v4"><img src="https://goreportcard.com/badge/github.com/pion/webrtc/v4" alt="Go Report Card"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
 <br>
