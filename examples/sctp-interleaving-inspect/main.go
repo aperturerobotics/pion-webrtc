@@ -160,9 +160,7 @@ func acceptBrowserOffer(ctx context.Context, sessionID string, rawOffer string, 
 }
 
 func gatherICECandidates(ctx context.Context, sessionID string, events *eventHub) (*ice.Agent, []ice.Candidate, error) {
-	agent, err := ice.NewAgentWithOptions(
-		ice.WithNetworkTypes([]ice.NetworkType{ice.NetworkTypeUDP4, ice.NetworkTypeUDP6}),
-	)
+	agent, err := ice.NewAgent()
 	if err != nil {
 		return nil, nil, err
 	}
@@ -189,7 +187,7 @@ func gatherICECandidates(ctx context.Context, sessionID string, events *eventHub
 		return nil, nil, err
 	}
 
-	if err = agent.GatherCandidates(); err != nil {
+	if err = agent.Gather(ice.WithNetworkTypes([]ice.NetworkType{ice.NetworkTypeUDP4, ice.NetworkTypeUDP6})); err != nil {
 		return nil, nil, err
 	}
 

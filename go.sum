@@ -1,3 +1,5 @@
+github.com/aperturerobotics/pion-ice/v4 v4.0.0-20260922235502-c6786d0587c6 h1:PqdxfMCuS57BCICSqWuYT7gik14vGcyTjvDIKFUsmuc=
+github.com/aperturerobotics/pion-ice/v4 v4.0.0-20260922235502-c6786d0587c6/go.mod h1:sKrYvECwcJ+Ut4a35HtNHQlZnjiODxMazNEJYoIJTy0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
@@ -36,8 +38,6 @@ github.com/pion/datachannel v1.6.3 h1:HZAYLpunVI0xi057ZiANl558d0uSpomcWw4UEPz3qX
 github.com/pion/datachannel v1.6.3/go.mod h1:oRmkXVVXxkUbqa8MatgdNHW29kvtQY3HUdjJQsfv2GE=
 github.com/pion/dtls/v3 v3.1.9 h1:rpeycmLIkc4krpk1IxP7+39o11QdCXbmV9+FGi9yZJ8=
 github.com/pion/dtls/v3 v3.1.9/go.mod h1:iKFQNYrjsN2TiA2YKKMqB9MOZaFpjFULBI/A4sW0eyc=
-github.com/pion/ice/v4 v4.4.4 h1:nPhqLkf8NoE9O8NBKd3Xo2NNc2PlBMdM07tWZ+IH/i8=
-github.com/pion/ice/v4 v4.4.4/go.mod h1:vkrbLwF98P/DJuCKoAmOQY4FJ7dJPI5VcBFOO3kyYx0=
 github.com/pion/interceptor v0.1.49 h1:iyBsNHRoLNNXZiJA/DdGvJgdyfS8YWDCzxIAlVjt5nY=
 github.com/pion/interceptor v0.1.49/go.mod h1:MZ6PJkja/TCo350HAnBrs/rUIyad9mWjpcvytrf3ViQ=
 github.com/pion/logging v0.2.4 h1:tTew+7cmQ+Mc1pTBLKH2puKsOvhm32dROumOZ655zB8=
@@ -58,8 +58,8 @@ github.com/pion/srtp/v3 v3.1.0 h1:keugrBOxtvAv5Urf4lBMfso8OCAX3mm7Brdl26JSvik=
 github.com/pion/srtp/v3 v3.1.0/go.mod h1:RlTlj08MtRReQiVm/PMmMFUDNjZkoKuKJMHkl9+M7a8=
 github.com/pion/stun/v4 v4.0.1 h1:S2ggK4hsUJJKoZfpL90uIqIRTj6xJ0NOIEkXgcpQif0=
 github.com/pion/stun/v4 v4.0.1/go.mod h1:byktbPA8U7HjJ2H8w3moP7nzq0Q+kYNulvMLPaubQL4=
-github.com/pion/transport/v5 v5.0.1 h1:b+nvq08JigTwuCYOAGsRBOK6QsAZzBZasbBwXAckU0k=
-github.com/pion/transport/v5 v5.0.1/go.mod h1:Qxw6fCEjFWQkRDZOhS4Vf+neJBcihauvA3uyEa1J1F0=
+github.com/pion/transport/v5 v5.1.0 h1:hvLkCL5w+Hy9rSPy0/ElNsgj/L8gkjHQJi2ZzYZfM/g=
+github.com/pion/transport/v5 v5.1.0/go.mod h1:Qxw6fCEjFWQkRDZOhS4Vf+neJBcihauvA3uyEa1J1F0=
 github.com/pion/turn/v5 v5.1.2 h1:acEOO+D5txJ52vKfcilmSMItfP23Q9K6pJ1LM5P2VV0=
 github.com/pion/turn/v5 v5.1.2/go.mod h1:57Oadc8fHnac15VFyCd6nEaBTVZBxQe2POUMD4lsHRA=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=

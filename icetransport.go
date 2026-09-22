@@ -219,14 +219,7 @@ func (t *ICETransport) restart() error {
 		return fmt.Errorf("%w: unable to restart ICETransport", errICEAgentNotExist)
 	}
 
-	if err := agent.Restart(
-		t.gatherer.api.settingEngine.candidates.UsernameFragment,
-		t.gatherer.api.settingEngine.candidates.Password,
-	); err != nil {
-		return err
-	}
-
-	return t.gatherer.Gather()
+	return t.gatherer.restart()
 }
 
 // Stop irreversibly stops the ICETransport.
